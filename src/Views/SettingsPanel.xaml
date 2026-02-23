@@ -13,42 +13,49 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Header / Toolbar -->
-        <DockPanel Grid.Row="0" LastChildFill="True">
-            <StackPanel DockPanel.Dock="Left">
-                <TextBlock FontSize="14" FontWeight="SemiBold" Text="Alias Flow" />
-                <TextBlock Margin="0,3,0,0"
-                           Opacity="0.8"
-                           TextWrapping="Wrap"
-                           Text="더블클릭(또는 Enter)로 수정. Delete로 삭제. JSON Import/Export로 백업/복원 가능합니다." />
+        <!-- Header / Toolbar (two rows to avoid overlap) -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+            <TextBlock FontSize="14" FontWeight="SemiBold" Text="Alias Flow" />
+            <TextBlock Margin="0,3,0,0"
+                     Opacity="0.8"
+                   TextWrapping="Wrap"
+                   Text="더블클릭(또는 Enter)로 수정. Delete로 삭제. JSON Import/Export로 백업/복원 가능합니다." />
             </StackPanel>
 
             <!-- Right Buttons -->
-            <StackPanel DockPanel.Dock="Right"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Right">
+            <WrapPanel Grid.Row="1"
+                   Margin="0,8,0,0"
+                   HorizontalAlignment="Right"
+                   Orientation="Horizontal">
 
-                <!-- CRUD -->
-                <Button Content="Add" MinWidth="72" Margin="0,0,6,0" Click="Add_Click"
-                        ToolTip="새 항목 추가"/>
-                <Button Content="Edit" MinWidth="72" Margin="0,0,6,0" Click="Edit_Click"
-                        ToolTip="선택 항목 수정 (Enter/더블클릭)"/>
-                <Button Content="Delete" MinWidth="72" Margin="0,0,12,0" Click="Delete_Click"
-                        ToolTip="선택 항목 삭제 (Delete)"/>
+            <!-- CRUD -->
+            <Button Content="Add" MinWidth="72" Margin="0,0,6,0" Click="Add_Click"
+                ToolTip="새 항목 추가"/>
+            <Button Content="Edit" MinWidth="72" Margin="0,0,6,0" Click="Edit_Click"
+                ToolTip="선택 항목 수정 (Enter/더블클릭)"/>
+            <Button Content="Delete" MinWidth="72" Margin="0,0,12,0" Click="Delete_Click"
+                ToolTip="선택 항목 삭제 (Delete)"/>
 
-                <!-- Backup -->
-                <Button Content="Import JSON" MinWidth="96" Margin="0,0,6,0" Click="Import_Click"
-                        ToolTip="JSON 파일에서 불러오기 (현재 목록을 교체)"/>
-                <Button Content="Export JSON" MinWidth="96" Click="Export_Click"
-                        ToolTip="현재 목록을 JSON으로 내보내기 (UTF-8, 한글 유지)"/>
-            </StackPanel>
-        </DockPanel>
+            <!-- Backup -->
+            <Button Content="Import JSON" MinWidth="96" Margin="0,0,6,0" Click="Import_Click"
+                ToolTip="JSON 파일에서 불러오기 (현재 목록을 교체)"/>
+            <Button Content="Export JSON" MinWidth="96" Click="Export_Click"
+                ToolTip="현재 목록을 JSON으로 내보내기 (UTF-8, 한글 유지)"/>
+            </WrapPanel>
+        </Grid>
 
         <!-- List -->
         <Border Grid.Row="2" BorderBrush="#33000000" BorderThickness="1" CornerRadius="6">
             <ListView x:Name="ItemsList"
                       ItemsSource="{Binding Items}"
                       SelectedItem="{Binding Selected, Mode=TwoWay}"
+                      Padding="0,0,0,18"
                       MouseDoubleClick="ItemsList_MouseDoubleClick"
                       KeyDown="ItemsList_KeyDown"
                       PreviewMouseWheel="ItemsList_PreviewMouseWheel"
@@ -72,6 +79,6 @@
         <TextBlock Grid.Row="3"
                    Margin="2,8,2,0"
                    Opacity="0.7"
-                   Text="Tip: Enter=Edit, Delete=Remove, Double-click=Edit"/>
+                   Text="Tips: Enter or Double-click=Edit, Delete=Remove"/>
     </Grid>
 </UserControl>
