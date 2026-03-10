@@ -14,6 +14,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Languages\\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Flow.Launcher.Plugin" Version="5.1.0" />
   </ItemGroup>
 

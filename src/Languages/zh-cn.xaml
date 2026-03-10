@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- KeywordEntryEditWindow -->
+    <sys:String x:Key="EntryWindow_Title">Alias条目</sys:String>
+    <sys:String x:Key="EntryWindow_TitleLabel">标题</sys:String>
+    <sys:String x:Key="EntryWindow_TitleTooltip">显示名称（例：百度、微信）</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionLabel">描述</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionTooltip">描述（可选）</sys:String>
+    <sys:String x:Key="EntryWindow_TargetLabel">目标</sys:String>
+    <sys:String x:Key="EntryWindow_TargetTooltip">URL 或文件/文件夹路径。支持环境变量（%USERNAME% 等）。</sys:String>
+    <sys:String x:Key="EntryWindow_TargetHint">例如：https://baidu.com   |   C:\Program Files\WeChat\WeChat.exe   |   %LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyLabel">热键</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyTooltip">例如：Ctrl+Shift+Space（简单字符串输入）</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyClearTooltip">清除</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyHint">热键在启动时首先尝试。（例如：Ctrl+Shift+Space）   ※ 这是字符串输入，不是热键捕获。</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsLabel">关键字</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsTooltip">用英文逗号（,）或换行分隔</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsHint">关键字用英文逗号或换行分隔。（标题/关键字自动支持拼音首字母搜索）例如：百度、baidu、bd</sys:String>
+    <sys:String x:Key="EntryWindow_CancelButton">取消</sys:String>
+    <sys:String x:Key="EntryWindow_SaveButton">保存</sys:String>
+
+    <!-- SettingsPanel -->
+    <sys:String x:Key="Settings_Title">Alias Flow</sys:String>
+    <sys:String x:Key="Settings_Subtitle">双击（或 Enter）编辑。Delete 删除。导入/导出 JSON 用于备份/恢复。</sys:String>
+    <sys:String x:Key="Settings_AddButton">添加</sys:String>
+    <sys:String x:Key="Settings_AddTooltip">添加新项目</sys:String>
+    <sys:String x:Key="Settings_EditButton">编辑</sys:String>
+    <sys:String x:Key="Settings_EditTooltip">编辑选定项目（Enter/双击）</sys:String>
+    <sys:String x:Key="Settings_DeleteButton">删除</sys:String>
+    <sys:String x:Key="Settings_DeleteTooltip">删除选定项目（Delete）</sys:String>
+    <sys:String x:Key="Settings_ImportButton">导入 JSON</sys:String>
+    <sys:String x:Key="Settings_ImportTooltip">从 JSON 文件导入（替换当前列表）</sys:String>
+    <sys:String x:Key="Settings_ExportButton">导出 JSON</sys:String>
+    <sys:String x:Key="Settings_ExportTooltip">将当前列表导出为 JSON（UTF-8，保留中文）</sys:String>
+    <sys:String x:Key="Settings_TitleColumn">标题</sys:String>
+    <sys:String x:Key="Settings_DescriptionColumn">描述</sys:String>
+    <sys:String x:Key="Settings_TargetColumn">目标</sys:String>
+    <sys:String x:Key="Settings_HotkeyColumn">热键</sys:String>
+    <sys:String x:Key="Settings_KeywordsColumn">关键字</sys:String>
+    <sys:String x:Key="Settings_TipText">提示：Enter=编辑，Delete=删除，双击=编辑</sys:String>
+
+</ResourceDictionary>

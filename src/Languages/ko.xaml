@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- KeywordEntryEditWindow -->
+    <sys:String x:Key="EntryWindow_Title">Alias Entry</sys:String>
+    <sys:String x:Key="EntryWindow_TitleLabel">제목</sys:String>
+    <sys:String x:Key="EntryWindow_TitleTooltip">표시 이름 (예: 네이버, 카카오톡)</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionLabel">설명</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionTooltip">설명(선택)</sys:String>
+    <sys:String x:Key="EntryWindow_TargetLabel">대상</sys:String>
+    <sys:String x:Key="EntryWindow_TargetTooltip">URL 또는 실행 파일/폴더 경로. 환경 변수(%USERNAME% 등) 사용 가능.</sys:String>
+    <sys:String x:Key="EntryWindow_TargetHint">예) https://naver.com   |   C:\Program Files\Kakao\KakaoTalk\KakaoTalk.exe   |   %LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyLabel">단축키</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyTooltip">예: Ctrl+Shift+Space (단순 문자열 입력)</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyClearTooltip">지우기</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyHint">Hotkey는 실행 시 먼저 시도됩니다. (예: Ctrl+Shift+Space)   ※ 단축키 캡처가 아니라 문자열 입력 방식입니다.</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsLabel">키워드</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsTooltip">쉼표(,) 또는 줄바꿈으로 구분</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsHint">키워드는 쉼표 또는 줄바꿈으로 구분합니다. (초성 검색은 Title/Keywords에서 자동 지원) 예) 네이버, naver, ㄴㅇㅂ</sys:String>
+    <sys:String x:Key="EntryWindow_CancelButton">취소</sys:String>
+    <sys:String x:Key="EntryWindow_SaveButton">저장</sys:String>
+
+    <!-- SettingsPanel -->
+    <sys:String x:Key="Settings_Title">Alias Flow</sys:String>
+    <sys:String x:Key="Settings_Subtitle">더블클릭(또는 Enter)로 수정. Delete로 삭제. JSON Import/Export로 백업/복원 가능합니다.</sys:String>
+    <sys:String x:Key="Settings_AddButton">추가</sys:String>
+    <sys:String x:Key="Settings_AddTooltip">새 항목 추가</sys:String>
+    <sys:String x:Key="Settings_EditButton">수정</sys:String>
+    <sys:String x:Key="Settings_EditTooltip">선택 항목 수정 (Enter/더블클릭)</sys:String>
+    <sys:String x:Key="Settings_DeleteButton">삭제</sys:String>
+    <sys:String x:Key="Settings_DeleteTooltip">선택 항목 삭제 (Delete)</sys:String>
+    <sys:String x:Key="Settings_ImportButton">JSON 가져오기</sys:String>
+    <sys:String x:Key="Settings_ImportTooltip">JSON 파일에서 불러오기 (현재 목록을 교체)</sys:String>
+    <sys:String x:Key="Settings_ExportButton">JSON 내보내기</sys:String>
+    <sys:String x:Key="Settings_ExportTooltip">현재 목록을 JSON으로 내보내기 (UTF-8, 한글 유지)</sys:String>
+    <sys:String x:Key="Settings_TitleColumn">제목</sys:String>
+    <sys:String x:Key="Settings_DescriptionColumn">설명</sys:String>
+    <sys:String x:Key="Settings_TargetColumn">대상</sys:String>
+    <sys:String x:Key="Settings_HotkeyColumn">단축키</sys:String>
+    <sys:String x:Key="Settings_KeywordsColumn">키워드</sys:String>
+    <sys:String x:Key="Settings_TipText">팁: Enter=수정, Delete=삭제, 더블클릭=수정</sys:String>
+
+</ResourceDictionary>

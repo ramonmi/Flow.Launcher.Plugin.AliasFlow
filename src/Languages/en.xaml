@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- KeywordEntryEditWindow -->
+    <sys:String x:Key="EntryWindow_Title">Alias Entry</sys:String>
+    <sys:String x:Key="EntryWindow_TitleLabel">Title</sys:String>
+    <sys:String x:Key="EntryWindow_TitleTooltip">Display name (e.g., Naver, KakaoTalk)</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionLabel">Description</sys:String>
+    <sys:String x:Key="EntryWindow_DescriptionTooltip">Description (optional)</sys:String>
+    <sys:String x:Key="EntryWindow_TargetLabel">Target</sys:String>
+    <sys:String x:Key="EntryWindow_TargetTooltip">URL or file/folder path. Environment variables (%USERNAME%, etc.) supported.</sys:String>
+    <sys:String x:Key="EntryWindow_TargetHint">e.g.) https://naver.com   |   C:\Program Files\Kakao\KakaoTalk\KakaoTalk.exe   |   %LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyLabel">Hotkey</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyTooltip">e.g.) Ctrl+Shift+Space (simple string input)</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyClearTooltip">Clear</sys:String>
+    <sys:String x:Key="EntryWindow_HotkeyHint">Hotkey is tried first on launch. (e.g., Ctrl+Shift+Space)   ※ This is string input, not hotkey capture.</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsLabel">Keywords</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsTooltip">Separated by comma (,) or newline</sys:String>
+    <sys:String x:Key="EntryWindow_KeywordsHint">Keywords are separated by comma or newline. (Hangul initial search is automatically supported for Title/Keywords) e.g.) Naver, naver, ㄴㅇㅂ</sys:String>
+    <sys:String x:Key="EntryWindow_CancelButton">Cancel</sys:String>
+    <sys:String x:Key="EntryWindow_SaveButton">Save</sys:String>
+
+    <!-- SettingsPanel -->
+    <sys:String x:Key="Settings_Title">Alias Flow</sys:String>
+    <sys:String x:Key="Settings_Subtitle">Double-click (or Enter) to edit. Delete to remove. Import/Export JSON for backup/restore.</sys:String>
+    <sys:String x:Key="Settings_AddButton">Add</sys:String>
+    <sys:String x:Key="Settings_AddTooltip">Add new item</sys:String>
+    <sys:String x:Key="Settings_EditButton">Edit</sys:String>
+    <sys:String x:Key="Settings_EditTooltip">Edit selected item (Enter/Double-click)</sys:String>
+    <sys:String x:Key="Settings_DeleteButton">Delete</sys:String>
+    <sys:String x:Key="Settings_DeleteTooltip">Delete selected item (Delete)</sys:String>
+    <sys:String x:Key="Settings_ImportButton">Import JSON</sys:String>
+    <sys:String x:Key="Settings_ImportTooltip">Import from JSON file (replaces current list)</sys:String>
+    <sys:String x:Key="Settings_ExportButton">Export JSON</sys:String>
+    <sys:String x:Key="Settings_ExportTooltip">Export current list as JSON (UTF-8, preserves Hangul)</sys:String>
+    <sys:String x:Key="Settings_TitleColumn">Title</sys:String>
+    <sys:String x:Key="Settings_DescriptionColumn">Description</sys:String>
+    <sys:String x:Key="Settings_TargetColumn">Target</sys:String>
+    <sys:String x:Key="Settings_HotkeyColumn">Hotkey</sys:String>
+    <sys:String x:Key="Settings_KeywordsColumn">Keywords</sys:String>
+    <sys:String x:Key="Settings_TipText">Tip: Enter=Edit, Delete=Remove, Double-click=Edit</sys:String>
+
+</ResourceDictionary>

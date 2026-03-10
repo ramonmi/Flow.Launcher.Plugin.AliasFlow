@@ -16,11 +16,11 @@
         <!-- Header / Toolbar -->
         <DockPanel Grid.Row="0" LastChildFill="True">
             <StackPanel DockPanel.Dock="Left">
-                <TextBlock FontSize="14" FontWeight="SemiBold" Text="Alias Flow" />
+                <TextBlock FontSize="14" FontWeight="SemiBold" Text="{DynamicResource Settings_Title}" />
                 <TextBlock Margin="0,3,0,0"
                            Opacity="0.8"
                            TextWrapping="Wrap"
-                           Text="더블클릭(또는 Enter)로 수정. Delete로 삭제. JSON Import/Export로 백업/복원 가능합니다." />
+                           Text="{DynamicResource Settings_Subtitle}" />
             </StackPanel>
 
             <!-- Right Buttons -->
@@ -29,18 +29,18 @@
                         HorizontalAlignment="Right">
 
                 <!-- CRUD -->
-                <Button Content="Add" MinWidth="72" Margin="0,0,6,0" Click="Add_Click"
-                        ToolTip="새 항목 추가"/>
-                <Button Content="Edit" MinWidth="72" Margin="0,0,6,0" Click="Edit_Click"
-                        ToolTip="선택 항목 수정 (Enter/더블클릭)"/>
-                <Button Content="Delete" MinWidth="72" Margin="0,0,12,0" Click="Delete_Click"
-                        ToolTip="선택 항목 삭제 (Delete)"/>
+                <Button Content="{DynamicResource Settings_AddButton}" MinWidth="72" Margin="0,0,6,0" Click="Add_Click"
+                        ToolTip="{DynamicResource Settings_AddTooltip}"/>
+                <Button Content="{DynamicResource Settings_EditButton}" MinWidth="72" Margin="0,0,6,0" Click="Edit_Click"
+                        ToolTip="{DynamicResource Settings_EditTooltip}"/>
+                <Button Content="{DynamicResource Settings_DeleteButton}" MinWidth="72" Margin="0,0,12,0" Click="Delete_Click"
+                        ToolTip="{DynamicResource Settings_DeleteTooltip}"/>
 
                 <!-- Backup -->
-                <Button Content="Import JSON" MinWidth="96" Margin="0,0,6,0" Click="Import_Click"
-                        ToolTip="JSON 파일에서 불러오기 (현재 목록을 교체)"/>
-                <Button Content="Export JSON" MinWidth="96" Click="Export_Click"
-                        ToolTip="현재 목록을 JSON으로 내보내기 (UTF-8, 한글 유지)"/>
+                <Button Content="{DynamicResource Settings_ImportButton}" MinWidth="96" Margin="0,0,6,0" Click="Import_Click"
+                        ToolTip="{DynamicResource Settings_ImportTooltip}"/>
+                <Button Content="{DynamicResource Settings_ExportButton}" MinWidth="96" Click="Export_Click"
+                        ToolTip="{DynamicResource Settings_ExportTooltip}"/>
             </StackPanel>
         </DockPanel>
 
@@ -59,11 +59,11 @@
 
                 <ListView.View>
                     <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="Title" Width="170" DisplayMemberBinding="{Binding Title}" />
-                        <GridViewColumn Header="Description" Width="240" DisplayMemberBinding="{Binding Description}" />
-                        <GridViewColumn Header="Target" Width="320" DisplayMemberBinding="{Binding Path}" />
-                        <GridViewColumn Header="Hotkey" Width="170" DisplayMemberBinding="{Binding Hotkey}" />
-                        <GridViewColumn Header="Keywords" Width="260" DisplayMemberBinding="{Binding KeywordsDisplay}" />
+                        <GridViewColumn Header="{DynamicResource Settings_TitleColumn}" Width="170" DisplayMemberBinding="{Binding Title}" />
+                        <GridViewColumn Header="{DynamicResource Settings_DescriptionColumn}" Width="240" DisplayMemberBinding="{Binding Description}" />
+                        <GridViewColumn Header="{DynamicResource Settings_TargetColumn}" Width="320" DisplayMemberBinding="{Binding Path}" />
+                        <GridViewColumn Header="{DynamicResource Settings_HotkeyColumn}" Width="170" DisplayMemberBinding="{Binding Hotkey}" />
+                        <GridViewColumn Header="{DynamicResource Settings_KeywordsColumn}" Width="260" DisplayMemberBinding="{Binding KeywordsDisplay}" />
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -72,6 +72,6 @@
         <TextBlock Grid.Row="3"
                    Margin="2,8,2,0"
                    Opacity="0.7"
-                   Text="Tip: Enter=Edit, Delete=Remove, Double-click=Edit"/>
+                   Text="{DynamicResource Settings_TipText}"/>
     </Grid>
 </UserControl>
